@@ -1,14 +1,14 @@
 {
     "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
-    "name": "datapackage-dgv-table2",
-    "title": "Table 2",
+    "name": "type-moissonneur",
+    "title": "Type moissonneur",
     "description": "Description Table 2",
     "keywords": [
        "table",
        "datagouv"
     ],
     "countryCode": "FR",
-    "homepage": "https://github.com/etalab/datapackage-template",
+    "homepage": "https://github.com/geoffreyaldebert/test-webinaire-mte",
     "licenses": [
        {
           "title": "Etalab Licence Ouverte 2.0",
@@ -20,7 +20,7 @@
        {
           "title": "Fichier valide (CSV)",
           "name": "exemple-valide-csv",
-          "path": "https://raw.githubusercontent.com/etalab/datapackage-dgv/v0.0.1/table2/exemple-valide.csv"
+          "path": "https://raw.githubusercontent.com/geoffreyaldebert/test-webinaire-mte/v0.0.1/table2/exemple-valide.csv"
        }
     ],
     "created": "2024-02-08",
@@ -36,55 +36,45 @@
     ],
     "fields": [
        {
-          "name": "id_table2",
+          "name": "id_typemoissonneur",
           "description": "Identifiant.",
-          "example": "C01-001",
-          "type": "string",
+          "example": "1",
+          "type": "number",
           "constraints": {
              "required": true
           }
        },
        {
-          "name": "nb_table2",
+          "name": "id_moissonneur",
           "description": "Nombre",
-          "example": "46.59698",
+          "example": "1",
           "type": "number",
           "constraints": {
-             "required": true,
-             "minimum": -100,
-             "maximum": 100
+             "required": true
           }
        },
        {
-          "name": "choices_table2",
+          "name": "choice_moissonneur",
           "description": "Choices",
-          "example": "Choice a",
+          "example": "CKAN",
           "type": "string",
           "constraints": {
              "required": false,
              "enum": [
-                "Choice a",
-                "Choice b"
+                "CKAN",
+                "ODS",
+                "DCAT"
              ]
-          }
-       },
-       {
-          "name": "id_table1",
-          "description": "Identifiant table1.",
-          "example": "C01-001",
-          "type": "string",
-          "constraints": {
-             "required": true
           }
        }
     ],
-    "primaryKey": "id_table2",
+    "primaryKey": "id_typemoissonneur",
     "foreignKeys": [
         {
-          "fields": "id_table1",
+          "fields": "id_moissonneur",
           "reference": {
-            "resource": "table1",
-            "fields": "id_table1"
+            "resource": "moissonneur",
+            "fields": "id_moissonneur"
           }
         }
       ]

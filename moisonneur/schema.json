@@ -1,14 +1,14 @@
 {
     "$schema": "https://specs.frictionlessdata.io/schemas/table-schema.json",
-    "name": "datapackage-dgv-table1",
-    "title": "Table 1",
+    "name": "datapackage-moissonneur",
+    "title": "Moissonneur",
     "description": "Description Table 1",
     "keywords": [
        "table",
        "datagouv"
     ],
     "countryCode": "FR",
-    "homepage": "https://github.com/etalab/datapackage-template",
+    "homepage": "https://github.com/geoffreyaldebert/test-webinaire-mte",
     "licenses": [
        {
           "title": "Etalab Licence Ouverte 2.0",
@@ -20,7 +20,7 @@
        {
           "title": "Fichier valide (CSV)",
           "name": "exemple-valide-csv",
-          "path": "https://raw.githubusercontent.com/etalab/datapackage-dgv/v0.0.1/table1/exemple-valide.csv"
+          "path": "https://raw.githubusercontent.com/geoffreyaldebert/test-webinaire-mte/v0.0.1/table1/exemple-valide.csv"
        }
     ],
     "created": "2024-02-08",
@@ -36,39 +36,23 @@
     ],
     "fields": [
        {
-          "name": "id_table1",
+          "name": "id_moissonneur",
           "description": "Identifiant.",
-          "example": "C01-001",
-          "type": "string",
+          "example": "1",
+          "type": "number",
           "constraints": {
              "required": true
           }
        },
        {
-          "name": "nb_table1",
+          "name": "nom_moissonneur",
           "description": "Nombre",
-          "example": "46.59698",
-          "type": "number",
-          "constraints": {
-             "required": true,
-             "minimum": 0,
-             "maximum": 1000
-          }
-       },
-       {
-          "name": "choices_table1",
-          "description": "Choices",
-          "example": "Choice 1",
+          "example": "EauFrance",
           "type": "string",
           "constraints": {
-             "required": false,
-             "enum": [
-                "Choice 1",
-                "Choice 2",
-                "Choice 3"
-             ]
+             "required": true
           }
        }
     ],
-    "primaryKey": "id_table1"
+    "primaryKey": "id_moissonneur"
  }
